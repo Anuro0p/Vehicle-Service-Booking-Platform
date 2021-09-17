@@ -1,0 +1,13 @@
+D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoBusinessLayer\bin\Debug\netcoreapp3.1\AVSoft.ServAutoBusinessLayer.deps.json
+D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoBusinessLayer\bin\Debug\netcoreapp3.1\AVSoft.ServAutoBusinessLayer.dll
+D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoBusinessLayer\bin\Debug\netcoreapp3.1\AVSoft.ServAutoBusinessLayer.pdb
+D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoBusinessLayer\bin\Debug\netcoreapp3.1\AVSoft.ServAutoDataAccessLayer.dll
+D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoBusinessLayer\bin\Debug\netcoreapp3.1\AVSoft.ServAutoDataAccessLayer.pdb
+D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoBusinessLayer\obj\Debug\netcoreapp3.1\AVSoft.ServAutoBusinessLayer.csproj.AssemblyReference.cache
+D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoBusinessLayer\obj\Debug\netcoreapp3.1\AVSoft.ServAutoBusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoBusinessLayer\obj\Debug\netcoreapp3.1\AVSoft.ServAutoBusinessLayer.AssemblyInfoInputs.cache
+D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoBusinessLayer\obj\Debug\netcoreapp3.1\AVSoft.ServAutoBusinessLayer.AssemblyInfo.cs
+D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoBusinessLayer\obj\Debug\netcoreapp3.1\AVSoft.ServAutoBusinessLayer.csproj.CoreCompileInputs.cache
+D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoBusinessLayer\obj\Debug\netcoreapp3.1\AVSoft.ServAutoBusinessLayer.csproj.CopyComplete
+D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoBusinessLayer\obj\Debug\netcoreapp3.1\AVSoft.ServAutoBusinessLayer.dll
+D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoBusinessLayer\obj\Debug\netcoreapp3.1\AVSoft.ServAutoBusinessLayer.pdb

@@ -1,1 +1,134 @@
-<p>welcomeworkshop works!</p>
+ <div [hidden]="isShow"  style="position: fixed; width: 100%; height: 100%; z-index: 98; background-color: rgba(37, 47, 56, 0.473); transition: ease-in 0.5s;">
+
+    <div [hidden]="isShow" class=" col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 " style="background-color: white; height: 100%; position: fixed ; right: 0; z-index: 100; transition: ease-in 0.5s;">
+      <app-workshopvehicle></app-workshopvehicle>
+    </div>
+  
+  </div>  
+
+
+
+
+
+
+
+<nav class="mynav navbar navbar-expand-lg   sticky-top " (scroll)="onWindowScroll(); " style="z-index: 90;">
+    <div class="navbar-brand"> <img src="assets/img/logoicon.png" width="40" height="40" style="vertical-align: middle; margin-top: -10px;" class="d-inline-block align-top"  alt="">
+      SERVO</div>
+  
+    
+    <button class="navbar-toggler" type="button"  (click)="isMenuCollapsed = !isMenuCollapsed" >
+      &#9776;
+    </button>
+  
+    
+    <div [hidden]="isMenuCollapsed"  class=" navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          
+          <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'.'" (click)="tog()" (click)="isMenuCollapsed = true">Add Vehicle</a>
+        </li>
+      </ul>
+      
+    </div>
+    
+  </nav>
+
+<div class="bg-main" style="z-index: -1;">
+
+</div>
+
+ <div class="container-fluid" style="z-index: 10;">
+
+    
+        <div class="row my-row  justify-content-md-center bg-transparent  add-padding" >
+        
+            <div class=" my-col col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12 add-top-bottom-margin add-margin tile add-shadow top-curve" >
+              <div class="row top-border top-curve"></div>
+                
+                <div class="row my-row aligncenter center align-self-center justify-content-md-center add-bottom-margin">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col  add-top-margin">
+                      <h1 class="head">COMPLETED</h1><br>
+                      <p>View and edit all of your finished orders here</p>
+                    </div>
+                    
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col add-top-margin ">
+                      <button  class="my-btn btn btn-primary butn1" (click)="GetCompletedOrders()" type="Select"> View Orders</button>
+                    </div>
+                    
+                </div>
+                    
+            </div>
+
+            <div class=" my-col col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12 add-top-bottom-margin add-margin tile add-shadow top-curve">
+              <div class="row top-border top-curve"></div>
+                <div class="row my-row aligncenter center align-self-center justify-content-md-center add-bottom-margin">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col  add-top-margin">
+                      <h1 class="head">PENDING </h1><br>
+                      <p>View and edit all of your pending orders here</p>
+                    </div>
+                    
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col add-top-margin ">
+                      <button  class="my-btn btn btn-primary butn1" (click)="GetPendingOrders()"  type="Select"> View Orders</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class=" my-col col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12 add-top-bottom-margin add-margin tile add-shadow top-curve">
+              <div class="row top-border top-curve"></div>
+                 <div class="row my-row aligncenter center align-self-center justify-content-md-center add-bottom-margin">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col  add-top-margin">
+                      <h1 class="head">NEW </h1><br>
+                      <p>View and edit all of your unchecked orders here</p>
+                    </div>
+                    
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col add-top-margin ">
+                      <button  class="my-btn btn btn-primary butn1" (click)="GetNewOrders()" type="Select"> View Orders</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="row jumbotron"  style="z-index: 90; background-color: rgb(233, 250, 255); margin-bottom: 0;">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <h2 style="color: aliceblue;" >Why Choose Us?</h2>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 head">
+            <h4 style="color: black;">There are hundreds of companies to choose from.
+              Finding one you can count on and build a relationship with for the long term is a difficult task. Here are some reasons why you have made the best decision for your company by choosing us .</h4>
+              <h3>Our Approach</h3>
+              <h4> To us, it's not just work - we take pride in the solutions we deliver. We encourage each other to achieve excellence in all endeavours and aren't satisfied until projects meet our own personal high standards. Please take a look at Our Process page to see how we will bring your project into existance.</h4>
+          </div>
+        </div> -->
+ </div>
+
+
+ <app-feedback style="width: 90%;"></app-feedback>
+
+
+ <footer class="page-footer font-small " style="background-color: rgb(31, 31, 31);">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" style="color: aliceblue;">© 2020 Copyright:
+    <a > AVSoft.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+
+
+ 
+
+
+ 

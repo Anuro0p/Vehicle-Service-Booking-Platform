@@ -33,5 +33,20 @@ namespace AVSoft.ServAutoBusinessLayer
                                         );
         }
 
+        public int RegisterWorkshopVehicle(Models.WorkshopVehicle workshopVehicle)
+        {
+            //workshopReg.Email = "asdasd";
+
+            return WDAL.RegisterWorkshopVehicle(workshopVehicle.Email,
+                                         workshopVehicle.Brand,
+                                         workshopVehicle.VehicleName,
+                                         workshopVehicle.Model,
+                                         workshopVehicle.Type,
+                                         workshopVehicle.ServiceType,
+                                         workshopVehicle.Charge,
+                                         workshopVehicle.ExtimateDays
+                                        );
+        }
+
     }
 }

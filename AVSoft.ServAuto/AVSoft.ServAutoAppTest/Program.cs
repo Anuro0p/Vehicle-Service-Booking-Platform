@@ -5,13 +5,13 @@ namespace AVSoft.ServAutoAppTest
 {
     public class Program
     {
-        static WorkshopDataAccessLayer DAL;
+        static DataAccessLayer DAL;
         public static void Main(string[] args)
         {
 
-            DAL = new WorkshopDataAccessLayer();
+            DAL = new DataAccessLayer();
 
-            int a = DAL.RegisterWorkshop("ananthu@gmail.com", "ana Autoworks", "ana Autoworks Nedumbaseri ", "Kerala", "Kochi","123123", "1234878782", "1234", 11);
+            int a = DAL.LoginUser("ananthu@gmail.com", "abcd");
             Console.WriteLine(a);
             a = Console.Read();
 

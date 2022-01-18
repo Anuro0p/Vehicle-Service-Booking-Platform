@@ -40,5 +40,24 @@ namespace AVSoft.ServAutoServiceLayer.Controllers
             
         }
 
+
+        [HttpPost]
+        public JsonResult RegisterWorkshopVehicle(Models.WorkshopVehicle workshopVehicle)
+        {
+            WorkshopVehicle workshopVehicleBL = new WorkshopVehicle(workshopVehicle.Email,
+                                                                 workshopVehicle.Brand,
+                                                                 workshopVehicle.VehicleName,
+                                                                 workshopVehicle.Model,
+                                                                 workshopVehicle.Type,
+                                                                 workshopVehicle.ServiceType,
+                                                                 workshopVehicle.Charge,
+                                                                 workshopVehicle.ExtimateDays
+                                                                );
+
+            return Json(WBL.RegisterWorkshopVehicle(workshopVehicleBL));
+
+
+        }
+
     }
 }

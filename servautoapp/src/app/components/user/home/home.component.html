@@ -1,0 +1,124 @@
+<div [hidden]="!isShw" style="position: fixed; width: 100%; height: 100%; z-index: 98; background-color: rgba(37, 47, 56, 0.473); transition: ease-in 0.5s;">
+
+    <div class="row">
+      <div [hidden]="!isShow" class=" col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 container" style="background-color: white; width: 30%; height: 100%; position: fixed ; right: 0; z-index: 99; max-width: 100%; transition: ease-in 0.5s;">
+        <app-userlogin  ></app-userlogin>
+    </div>   
+    </div>
+   
+    <div [hidden]="!shw" class=" col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 container" style="background-color: white; height: 100%; position: fixed ; right: 0; z-index: 99; max-width: 100%; transition: ease-in 0.5s;">
+        <!-- <app-customerregister></app-customerregister> -->
+    </div>
+
+</div>
+<div class="container-fluid automar"  >
+
+
+
+    <!-- top section -->
+    <div class="row my-row  ">
+
+        <!-- top left -->
+        
+            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-xs-12 my-col  ">
+                <!-- top-section -->
+                <div class="row my-row add-margin">
+                    <!-- logo -->
+                    <div class="my-col col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <img class="img-center" style="width: 100%; max-width: 300px;" src="\assets\img\logos.png" alt="">
+                    </div>
+                    <div class="my-col col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                        
+                    </div>
+                    <!-- login/sign-up button -->
+                    <div class="my-col col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12   aligncenter ">
+                        <button (click)=toggleDisplay()  class=" btn btn-primary butn1" type="login"> Login</button>
+                        <a class=" btn btn-primary butn2 dropdown-toggle " (click)=togg() href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sign up
+                        </a>
+                        <div class="" [hidden]="!tog" aria-labelledby="dropdownMenuLink" >
+                            <a class="dropdown-item btn btn-secondary butn2" style="border: 1px solid black;  width: 200px; background-color: white; color: rgb(0, 0, 0); margin-top: 1px;" href="#" (click)=toggleReg()> signup as a customer</a> <br>
+                            <a class="dropdown-item btn btn-secondary butn2" style="background-color: rgb(47, 104, 189); width: 200px; color: rgb(0, 0, 0); margin-top: 1px; border: none;"   >Register service</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- mid-section -->
+                <div class="row my-row add-margin">
+                    <div class="my-col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-lg-left text-md-left text-xl-left text-sm-center text-xs-center ">
+                        <h1 class="font-weight-bolder">The Service you Desire</h1>
+                    </div>
+                </div>
+
+                <div class="row my-row add-left-margin add-right-margin">
+                    <div class="my-col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-lg-left text-md-left text-xl-left text-sm-center text-xs-center ">
+                        <h3 class="font-weight-bolder">
+                            <small class="text-muted">Order your vehicle service online</small>
+                        </h3>
+                    </div>
+                </div>
+                <!-- bottom-section -->
+                <div class="row my-row add-margin">
+                    <div class="my-col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10 my-col rpadding">
+
+                       <h3 class="font-weight-bolder">For Emergency Services  </h3>
+                       <h1 class="font-weight-bolder">Call: +91 7907864802</h1>
+                    </div>
+                </div>
+            </div>
+            
+        
+
+        <!-- top right -->
+        <div class="my-col col-xl-5 col-lg-5 col-md-5 col-sm-0 col-xs-0 automar aligncenter lrpadding " style="margin-left: auto; padding-left: 0%; padding-right: 0%;" >
+            <img src="/assets/img/282024390-01.jpeg" class="bgimg" alt="">
+        </div>
+
+    </div>
+
+
+
+
+    <!-- feature heading -->
+    <div class="row my-row  feat">
+        <div class="col-12 my-col  aligncenter">
+            <h2>Service booking was never so easy</h2>
+            <h5>Only 4 steps to follow </h5>
+        </div>
+    </div>
+
+
+
+
+    <!-- features -->
+    <div class="row my-row feat">
+        <div class="col-12 my-col  aligncenter">
+            <div class="row my-row add-margin">
+                <!-- feat1 -->
+                <div class="my-col col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                    <img  class="img-center" src="assets/img/s1.png" alt="">
+                    <h3>Choose your Service</h3>
+                </div>
+                <!-- feat2 -->
+                <div class="my-col col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                    <img  class="img-center" src="assets/img/s2.png" alt="">
+                    <h3>Order your Service</h3>
+                </div>
+                <!-- feat3 -->
+                <div class="my-col col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                    <img  class="img-center" src="assets/img/s3.png" alt="">
+                    <h3>Pay online/at delivery</h3>
+                </div>
+                <!-- feat4 -->
+                <div class="my-col col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                    <img  class="img-center" src="assets/img/s4.png" alt="">
+                    <h3> Enjoy our Service</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</div>

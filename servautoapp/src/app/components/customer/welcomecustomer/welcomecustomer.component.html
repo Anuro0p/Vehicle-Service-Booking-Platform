@@ -1,0 +1,174 @@
+<div [hidden]="!isShow"  style="position: fixed; width: 100%; height: 100%; z-index: 98; background-color: rgba(37, 47, 56, 0.473); transition: ease-in 0.5s;">
+
+  <div [hidden]="!isShow" class=" col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 " style="background-color: white; height: 100%; position: fixed ; right: 0; z-index: 100;  transition: ease-in 0.5s;">
+    <app-customervehicle></app-customervehicle>
+  </div>
+
+</div>
+
+<div [hidden]="showupdate"  style="position: fixed; width: 100%; height: 100%; z-index: 98; background-color: rgba(37, 47, 56, 0.473); transition: ease-in 0.5s;">
+
+  <div [hidden]="showupdate" class=" col-xl-5 col-lg-5 col-md-6 col-sm-12 col-xs-12 " style="background-color: white; height: 100%; position: fixed ; right: 0; z-index: 100; transition: ease-in 0.5s;">
+    <app-customerupdate></app-customerupdate>
+  </div>
+
+</div>
+
+
+<nav class="mynav navbar navbar-expand-lg   sticky-top " (scroll)="onWindowScroll(); " style="z-index: 90;">
+  <div class="navbar-brand"> <img src="assets/img/logoicon.png" width="40" height="40" style="vertical-align: middle; margin-top: -10px;" class="d-inline-block align-top"  alt="">
+    SERVO</div>
+
+  
+  <button class="navbar-toggler" type="button"  (click)="isMenuCollapsed = !isMenuCollapsed" >
+    &#9776;
+  </button>
+
+  
+  <div [hidden]="isMenuCollapsed"  class=" navbar-collapse">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        
+        <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'.'" (click)="ordernavigate()"  (click)="isMenuCollapsed = true">Orders</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'.'"  (click)="isMenuCollapsed = true">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'.'" (click)="tog()" (click)="isMenuCollapsed = true" (click)="isShow=!isShow">Add Vehicle</a>
+      </li>
+    </ul>
+  </div>
+  <ul class="navbar-nav" style="float: right;">
+    <li class="nav-item active">
+      <a class="nav-link" [routerLink]="'.'" (click)="togupdate()" (click)="showupdate=!showupdate">Edit Profile</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" [routerLink]="'.'" (click)="logout()" >logout</a>
+    </li>
+  </ul>
+</nav>
+<div id="demo" class="carousel slide width width1 width2 width3 width4 width5 width6 width7 width8 width9" data-ride="carousel" >
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+
+  <div class="carousel-inner" style="height: 100% ;">
+    <!-- 1st slide -->
+    <div class="carousel-item active" style="height: 100%; background-image: url(assets/img/c1.jpg); background-size: 100% 200%;">
+      <div class="aligncenter center my-col" style="height: 100%; background-color: rgba(27, 27, 71, 0.267);">
+        <div class="row my-row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col head ">
+            <h1>Order from anywhere</h1><br>
+          </div>
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col  ">
+            <button  class="my-btn btn btn-primary butn1" (click)="RouteOrder()" type="Select"> Order</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- 2nd slide -->
+    <div class="carousel-item" style="height: 100%; background-image: url(assets/img/c2.jpg); background-size: 100% 150%;" >
+      <div class="aligncenter center my-col" style="height: 100%;">
+        <div class="row my-row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col head ">
+            <h1>Book your service from anywhere</h1><br>
+          </div>
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col  ">
+            <button  class="my-btn btn btn-primary butn1" (click)="RouteOrder()"  type="Select"> Order</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- 3rd slide -->
+    <div class="carousel-item" style="height: 100%; background-image: url(assets/img/c3.jpg); background-size: 100% 200%;">
+      <div class="aligncenter center my-col" style="height: 100%;">
+        <div class="row my-row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col head ">
+            <h1>Book your service in one click</h1><br>
+          </div>
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col  ">
+            <button  class="my-btn btn btn-primary butn1" (click)="RouteOrder()" type="Select"> Order</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+
+<div class="container ">
+<!-- feature heading -->
+  <div class="row my-row  feat add-margin">
+      <div class="col-12 my-col  aligncenter">
+          <h1>WHY CHOOSE US</h1>
+          <h5>Fastest service with best price</h5>
+          
+      </div>
+  </div>
+
+
+
+
+  <!-- features -->
+  <div class="row my-row feat">
+      <div class="col-12 my-col  aligncenter">
+          <div class="row my-row ">
+              <!-- feat1 -->
+              <div class="my-col col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                  <img  class="img-center" src="assets/img/l1.png" alt="">
+                  <h3>The Best Service</h3>
+                  <h5>We provide the best service with many trusted customers</h5>
+              </div>
+              <!-- feat2 -->
+              <div class="my-col col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                  <img  class="img-center" src="assets/img/l2.png" alt="">
+                  <h3>Lightning Fast Service</h3>
+                  <h5>We provide the fastest service at your point finger</h5>
+              </div>
+              <!-- feat3 -->
+              <div class="my-col col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                  <img  class="img-center" src="assets/img/l3.png" alt="">
+                  <h3>Millions trust us</h3>
+                  <h5 style="color: rgba(44, 44, 44, 0.753);">over million customers are happy with our service </h5>
+              </div>
+              
+          </div>
+      </div>
+  </div>
+</div>
+<div class="add-top-margin">
+  <app-feedback></app-feedback>
+</div>
+
+
+
+<footer class="page-footer font-small " style="background-color: rgb(31, 31, 31);">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" style="color: aliceblue;">© 2020 Copyright:
+    <a > AVSoft.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>

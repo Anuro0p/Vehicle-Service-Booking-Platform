@@ -1,0 +1,49 @@
+
+    <form #newCustomerVehicleForm="ngForm" (ngSubmit)="addNewCustomervehicle(newCustomerVehicleForm)" >
+        
+        <div class="add-margin">
+            <div class="my-row row " >
+                <button (click)="tog()"  type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <div class="form-group ">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col add-top-margin ">
+                    <h1>Add New vehicle</h1>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col add-top-margin ">
+                    <input type="text" class="input-style" name="vehicleName" placeholder="Enter a name to save it" ngModel required>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col heights add-top-margin ">
+                    <select class="form-control " name="type"  [(ngModel)]="selectedtype" (change)="selectType()" required >
+                        <option [selected] [ngValue]="selectedtype" hidden disabled >{{selectedtype}}</option>
+                        <option value="bike" >four-wheeler</option>
+                        <option value="car">two-wheeler</option>
+                    </select>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col add-top-margin ">
+                    <select class="form-control col-form-label-lg" name="brand" [(ngModel)]="selectedbrand" (change)="selectBrand()" [disabled]="isshw" required>
+                        <option [selected] [ngValue]="selectedbrand" hidden disabled >{{selectedbrand}}</option>
+                        <option *ngFor="let item of vehiclebrand" [ngValue]="item.brand">{{item.brand}}</option>
+                    </select>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col add-top-margin ">
+                    <select  class="dis form-control" name="model" [(ngModel)]="selectedmodel" [disabled]="shw">
+                        <option [selected] [ngValue]="selectedmodel" hidden disabled >{{selectedmodel}}</option>
+                        <option *ngFor="let item of vehiclemodel" [ngValue]="item.model">{{item.model}}</option>
+                    </select>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col add-top-margin ">
+                    <input type="text" class="input-style" name="vehicleNumber" placeholder="Enter vehicle number KL 41 A 1234" ngModel required>
+                </div>
+            </div>  
+        </div>
+        
+        <input class="btn btn-primary add-top-margin" type="submit" value="Add details">
+    </div>
+    </form>
+
+
+
+

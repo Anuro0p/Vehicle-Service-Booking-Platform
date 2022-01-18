@@ -1,0 +1,28 @@
+
+<form #feedbackForm="ngForm" (ngSubmit)="newFeedback(feedbackForm)">
+<div class="row my-row" style="background-color: white;">
+    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-0 col-xs-0 my-col bg-feedback" >
+
+    </div>
+
+    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-xs-12 my-col">
+        <div class="my-row row justify-content-md-center justify-content-center add-top-margin">
+            <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10 my-col form-group justify-content-md-center justify-content-center align-self-center align-content-center">
+                <div class="row my-row">
+                    <H1>FEEDBACKS</H1>
+                </div>
+                <div class="row my-row ">
+                    <input class="input-style line-input" type="text" name="name" placeholder="Enter Your name" id="" ngModel required>
+                </div>
+                <div class="row my-row">
+                    <textarea name="message" class="input-style" id="" cols="30" rows="5" placeholder="Enter your feedback" ngModel required></textarea> 
+                </div>  
+                <div class="row my-row " style="margin-bottom: 50px;">
+                    <input  class="btn btn-primary input-style" type="submit" value="submit">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

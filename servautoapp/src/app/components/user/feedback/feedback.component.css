@@ -1,0 +1,39 @@
+.my-row1{
+    border:2px solid black;
+}
+
+.my-col1{
+    border: 2px solid red;
+}
+
+.input-style{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.line-input{
+    height: 40px;
+}
+
+
+.bg-feedback{
+    background-image: url(../../../../assets/img/feedback1.jpg);
+    background-size: cover;
+}
+
+
+.btn{
+    background-color: rgb(255, 174, 0);
+    border-radius: 0%;
+    height: 60px;
+    border: none;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.719);
+}
+
+.add-top-margin{
+    margin-top: 50px;
+}
+
+.btn:hover{
+    background-color: rgb(199, 136, 0);
+}

@@ -1,0 +1,47 @@
+<div class="container-fluid ">
+    <div class="my-row row ">
+        <div class="col my-col add-margin">
+            <!-- close button -->
+            <div class="my-row row">
+                <button   type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!-- heading -->
+            <div class="my-row row">
+                <div class="my-col col">
+                    <h2>login</h2>
+                </div>
+            </div>
+            <!-- or link -->
+            <div class="my-row row add-bottom-margin">
+                <div class="my-col col point">
+                   <a class="point"  >Or create a new account </a>
+                </div>
+            </div>
+            <form #loginForm="ngForm" (ngSubmit)="UserLogin(loginForm)" >
+                <div class="form-group">
+                    <!-- textbox1 -->
+                    <div class="my-row row">
+                        <div class="my-col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <input class="centwidth" type="text" name="email" placeholder="Enter Username" ngModel>
+                        </div>
+                    </div>
+                    <!-- textbox2 -->
+                    <div class="my-row row">
+                        <div class="my-col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <input style="border-top: 0px;" class="centwidth" type="password" name="password" placeholder="Enter Password" ngModel>
+                        </div>
+                    </div>
+                    <!-- login button -->
+                    <div class="my-row row">
+                        <div class="my-col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <input  class=" centwidth btn btn-primary" type="submit" value="Login">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</div>

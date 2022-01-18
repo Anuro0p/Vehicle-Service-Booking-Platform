@@ -1,0 +1,88 @@
+<!-- <form #newServiceVehicleForm="ngForm" (ngSubmit)="addNewServiceVehicle(newServiceVehicleForm)" >
+    <div class="form-group">
+        <input type="text" name="vehicleName" placeholder="Enter a name to save it" ngModel required>
+        <select class="form-control" name="type"  [(ngModel)]="selectedtype" (change)="selectType()" required >
+            <option [selected] [ngValue]="selectedtype" hidden disabled >{{selectedtype}}</option>
+            <option value="four-wheeler" >four-wheeler</option>
+            <option value="two-wheeler">two-wheeler</option>
+        </select>
+
+        <select class="form-control" name="brand" [(ngModel)]="selectedbrand"  (change)="selectBrand()" [disabled]="isshw" required>
+            <option [selected] [ngValue]="selectedbrand" hidden disabled >{{selectedbrand}}</option>
+            <option *ngFor="let item of vehiclebrand" [ngValue]="item.brand">{{item.brand}}</option>
+        </select>
+            
+        <select  class=" form-control" name="model" [(ngModel)]="selectedmodel" (change)="selectModel()" [disabled]="shw" required>
+            <option [selected] [ngValue]="selectedmodel" hidden disabled >{{selectedmodel}}</option>
+            <option *ngFor="let item of vehiclemodel" [ngValue]="item.model" (click)="sel(item)">{{item.model}}</option>
+        </select>
+
+        <select  class=" form-control" name="types" [(ngModel)]="selectedservicetypes" (change)="selectServiceTypes()" [disabled]="typeshw" required >
+            <option [selected] [ngValue]="selectedservicetypes" hidden disabled >{{selectedservicetypes}}</option>
+            <option *ngFor="let item of stype" [ngValue]="item">{{item}}</option>
+        </select>
+        <div >
+            <input type="number" name="charge" id="" placeholder="enter price" ngModel  required >
+            <input type="number" name="extimatedays" id="" placeholder="enter estimate days" ngModel required >
+        </div>
+        <input class="btn btn-primary" type="submit" value="submit">
+    </div>    
+</form> -->
+
+
+
+
+
+<form #newServiceVehicleForm="ngForm" (ngSubmit)="addNewServiceVehicle(newServiceVehicleForm)" >
+        
+    <div class="add-margin">
+        <div class="my-row row " >
+            <button (click)="tog()" type="button" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <div class="form-group ">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col add-top-margin ">
+                <h1>Add New vehicle</h1>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col add-top-margin ">
+                <input type="text" class="input-style" name="vehicleName" placeholder="Enter a name to save it" ngModel required>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col heights add-top-margin ">
+                <select class="form-control " name="type"  [(ngModel)]="selectedtype" (change)="selectType()" required >
+                    <option [selected] [ngValue]="selectedtype" hidden disabled >{{selectedtype}}</option>
+                    <option value="car" >four-wheeler</option>
+                    <option value="bike">two-wheeler</option>
+                </select>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col add-top-margin ">
+                <select class="form-control col-form-label-lg" name="brand" [(ngModel)]="selectedbrand" (change)="selectBrand()" [disabled]="isshw" required>
+                    <option [selected] [ngValue]="selectedbrand" hidden disabled >{{selectedbrand}}</option>
+                    <option *ngFor="let item of vehiclebrand" [ngValue]="item.brand">{{item.brand}}</option>
+                </select>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col add-top-margin ">
+                <select  class="dis form-control" name="model" [(ngModel)]="selectedmodel" (change)="selectModel()" [disabled]="shw">
+                    <option [selected] [ngValue]="selectedmodel" hidden disabled >{{selectedmodel}}</option>
+                    <option *ngFor="let item of vehiclemodel" [ngValue]="item.model">{{item.model}}</option>
+                </select>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col add-top-margin ">
+                 <select  class=" form-control" name="types" [(ngModel)]="selectedservicetypes" (change)="selectServiceTypes()" [disabled]="typeshw" required >
+                    <option [selected] [ngValue]="selectedservicetypes" hidden disabled >{{selectedservicetypes}}</option>
+                    <option *ngFor="let item of services" [ngValue]="item.types">{{item.types}}</option>
+                </select>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col add-top-margin ">
+                <input type="number" class="input-style" name="charge" placeholder="enter price" ngModel required>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col add-top-margin ">
+                <input type="number" class="input-style" name="extimatedays" placeholder="enter estimate days" ngModel required>
+            </div>
+        </div>  
+    </div>
+    
+    <input class="btn btn-primary add-top-margin" type="submit" value="Add details">
+</div>
+</form>

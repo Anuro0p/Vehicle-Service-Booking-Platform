@@ -1,0 +1,21 @@
+<div class="contariner-fluid">
+    <div class="row bg-warning justify-content-md-center " >
+        <h1>Your Orders</h1>
+    </div>
+        <button class="btn btn-md "  (click)="year=year-1" (click)="ngOnInit()" ><<</button>
+        <button class="btn btn-md btn-secondary">{{year}}</button>
+        <button class="btn btn-md " (click)="year=year+1" (click)="ngOnInit()">>></button>
+    <div class="row my-row"  style="margin: 50px; margin-bottom: 0px;">
+         <li  *ngFor="let item in orderdata">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12"  style="margin: 10px; border: 1px solid grey ; border-top: 5px solid green; border-top-left-radius: 5px; border-top-right-radius: 5px;">
+            
+            <p>Type           :{{item.type}}</p>
+            <p>Brand          :{{item.brand}}</p>
+            <p>Model          :{{item.model}}</p>
+            <p>Service        :{{item.serviceType}}</p>
+            <p>Status         :{{item.progress}}</p>
+        </div>
+    </li >
+    </div>
+</div>
+

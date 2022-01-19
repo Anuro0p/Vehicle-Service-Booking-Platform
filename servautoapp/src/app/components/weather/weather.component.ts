@@ -1,7 +1,10 @@
 import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ICovidData } from 'src/app/models/coviddata';
+import { ICustomerVehicle } from 'src/app/models/customervehicle';
 import { IWeatherData } from 'src/app/models/weatherdata';
+import { CustomerService } from 'src/app/services/customer.service';
 import { WeatherService } from 'src/app/services/weather.service';
 import { WorkshopserviceService } from 'src/app/services/workshopservice.service';
 
@@ -12,56 +15,11 @@ import { WorkshopserviceService } from 'src/app/services/workshopservice.service
 })
 export class WeatherComponent implements OnInit {
 
-  
-  sum:number=0;
+ customervehicle!:ICustomerVehicle[];
+  email!:string;
+  constructor(private _weatherservice:WeatherService,private _workshopService:WorkshopserviceService,private _customerService:CustomerService,private router:Router) { }
 
-  abc:any;
-
-  // obj!:object[];
-  
-  public das = [{red:2,blue:1},
-                 {red:1,blue:1},
-                  {red:2,blue:1}]
-
-  constructor(private _weatherservice:WeatherService,private _workshopService:WorkshopserviceService) { }
-
-   async ngOnInit(): Promise<void> {
-   //this.GetWeather();
-   this.das.forEach(a=> this.sum+=a.red);
-   // sum= sum+1;
-   // sum+=1;
-     this.GetDateData();
-    
-     await this.delay(1000);
-      console.log("hello",this.covidData);
-    
-  }
-
-
- 
-  abcd!:IWeatherData[];
-  GetWeather(){
-    this._weatherservice.GetWeather().subscribe(
-      Response=>{ 
-        this.abcd=Response;
-      }
-    )
-  }
-
-  covidData!:ICovidData;
-  async GetDateData(){
-    this._weatherservice.GetDateData().subscribe(
-      Response=>{ 
-       this.covidData=Response;
-         console.log(this.covidData);
-         
-      }
-    )
-    await this.delay(1000);
-  }
-
-   delay(ms: number) {
-    return new Promise( resolve => setTimeout(resolve, ms) );
+  ngOnInit():void {
   }
 
 }

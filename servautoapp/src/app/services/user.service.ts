@@ -33,4 +33,8 @@ export class UserService {
     let typeData=this._http.get<IServiceTypes[]>('https://localhost:44313/api/v2/User/GetServiceTypes');
     return typeData;
   }
+  getServiceType():Observable<string[]>{
+    let typeData=this._http.get<string[]>('https://localhost:44313/api/v2/User/GetServiceType');
+    return typeData;
+  }
 }

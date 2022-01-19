@@ -1,0 +1,52 @@
+<nav class="mynav navbar navbar-expand-lg   sticky-top " (scroll)="onWindowScroll(); " style="z-index: 90;">
+    <div class="navbar-brand"> <img src="assets/img/logoicon.png" width="40" height="40" style="vertical-align: middle; margin-top: -10px;" class="d-inline-block align-top"  alt="">
+      SERVO</div> -->
+  
+    
+    <button class="navbar-toggler" type="button"   >
+      &#9776;
+    </button>
+  
+
+    <div   class=" navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          
+          <a class="nav-link" [routerLink]="'.'" >Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'.'" >About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'.'">Add Vehicle</a>
+        </li>
+      </ul>
+      
+    </div>
+    
+  </nav> 
+
+<div class="bg-main" style="z-index: -1;">
+    
+</div>
+
+
+
+<div class="contariner-fluid">
+    <div class="row bg-warning justify-content-md-center " >
+        <h1>Your Orders</h1>
+    </div>
+
+    <div class="row my-row"  style="margin: 50px; margin-bottom: 0px;">
+         
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12" *ngFor="let item of orderdata" style="margin: 10px; border: 1px solid grey ; border-top: 5px solid green; border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: white;">
+            
+            <p>Type           :{{item.type}}</p>
+            <p>Brand          :{{item.brand}}</p>
+            <p>Model          :{{item.model}}</p>
+            <p>Service        :{{item.serviceType}}</p>
+            <p>Status         :{{item.progress}}</p>
+        </div>
+    </div>
+</div>

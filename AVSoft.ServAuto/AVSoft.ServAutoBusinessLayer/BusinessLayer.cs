@@ -122,5 +122,68 @@ namespace AVSoft.ServAutoBusinessLayer
             }
             return serviceTypesList;
         }
+
+        public List<string> GetServiceType()
+        {
+            List<string> serviceTypesList = new List<string>();
+            try
+            {
+
+                DataTable serviceTypes = DAL.GetServiceFromTable();
+                foreach (DataRow serviceTypesRow in serviceTypes.Rows)
+                {
+                    string types;
+                    types = serviceTypesRow["Services"].ToString();
+                    serviceTypesList.Add(types);
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                serviceTypesList = null;
+            }
+            return serviceTypesList;
+        }
+
+        public List<Models.ServiceReg> GetServiceTable()
+        {
+            List<Models.ServiceReg> serviceTableDataList = new List<Models.ServiceReg>();
+            try
+            {
+                DataTable serviceRegModel = DAL.GetServiceTable();
+                foreach (DataRow serviceRegModelRow in serviceRegModel.Rows)
+                {
+                    Models.ServiceReg serviceRegModelObj = new Models.ServiceReg();
+                    serviceRegModelObj.Email = serviceRegModelRow["Email"].ToString();
+                    serviceRegModelObj.Name = serviceRegModelRow["name"].ToString();
+                    serviceRegModelObj.Address = serviceRegModelRow["Address"].ToString();
+                    serviceRegModelObj.Pincode = serviceRegModelRow["Pin"].ToString();
+                    serviceRegModelObj.Phno = serviceRegModelRow["Phno"].ToString();
+                    serviceRegModelObj.Capacity = Convert.ToInt32(serviceRegModelRow["Capacity"]);
+                    serviceRegModelObj.Password = serviceRegModelRow["Password"].ToString();
+                    serviceRegModelObj.Status = Convert.ToInt32(serviceRegModelRow["status"]);
+                    serviceTableDataList.Add(serviceRegModelObj);
+
+                }
+
+                Console.WriteLine("bl okay");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                serviceTableDataList = null;
+            }
+
+            return serviceTableDataList;
+
+        }
+
+        public int VerifyService(string email)
+        {
+            return DAL.VerifyService(email);
+        }
     }
 }

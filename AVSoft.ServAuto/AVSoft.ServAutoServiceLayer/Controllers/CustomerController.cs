@@ -53,5 +53,43 @@ namespace AVSoft.ServAutoServiceLayer.Controllers
 
         }
 
+        [HttpGet]
+        public JsonResult GetCustomerVehicleByEmail(string email)
+        {
+            return Json(CBL.GetCustomerVehicleByEmail(email));
+        }
+
+        [HttpGet]
+        public JsonResult GetServiceByBrandModelTypePincode(string type, string brand, string model, string serviceType)
+        {
+            return Json(CBL.GetServiceByBrandModelTypePincode(type, brand, model, serviceType));
+        }
+
+        [HttpGet]
+        public JsonResult GetUserDataByEmail(string email)
+        {
+            return Json(CBL.GetUserDataByEmail(email));
+        }
+
+
+        [HttpPost]
+        public JsonResult NewOrder(Models.OrderData orderData)
+        {
+            return Json(CBL.NewOrder(orderData.customerEmail, orderData.serviceEmail, orderData.type, orderData.brand, orderData.model, orderData.serviceType, orderData.pickupLocation, orderData.extimateCost, orderData.days, orderData.progress));
+        }
+
+        [HttpGet]
+        public JsonResult GetOrdersByEmailAndYear(string email)
+        {
+            return Json(CBL.GetOrdersByEmailAndYear(email,100));
+        }
+
+        [HttpGet]
+        public JsonResult GetOrdersByEmailAndProgress(string email,string progress)
+        {
+            return Json(CBL.GetOrdersByWorkshopEmailAndProgress(email, progress));
+        }
+
+
     }
 }

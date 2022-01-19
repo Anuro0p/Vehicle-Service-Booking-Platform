@@ -34,3 +34,5 @@ D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoAppTest\obj\Debug\netco
 D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoAppTest\obj\Debug\netcoreapp3.1\AVSoft.ServAutoAppTest.dll
 D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoAppTest\obj\Debug\netcoreapp3.1\AVSoft.ServAutoAppTest.pdb
 D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoAppTest\obj\Debug\netcoreapp3.1\AVSoft.ServAutoAppTest.genruntimeconfig.cache
+D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoAppTest\bin\Debug\netcoreapp3.1\AVSoft.ServAutoBusinessLayer.dll
+D:\Project\Repos\SERVAUTO\AVSoft.ServAuto\AVSoft.ServAutoAppTest\bin\Debug\netcoreapp3.1\AVSoft.ServAutoBusinessLayer.pdb

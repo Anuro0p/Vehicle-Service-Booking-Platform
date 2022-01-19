@@ -1,19 +1,18 @@
 ﻿using System;
-using AVSoft.ServAutoDataAccessLayer;
+using AVSoft.ServAutoBusinessLayer;
 
 namespace AVSoft.ServAutoAppTest
 {
     public class Program
     {
-        static DataAccessLayer DAL;
+        static BusinessLayer DAL;
         public static void Main(string[] args)
         {
 
-            DAL = new DataAccessLayer();
+            DAL = new BusinessLayer();
 
-            int a = DAL.LoginUser("ananthu@gmail.com", "abcd");
-            Console.WriteLine(a);
-            a = Console.Read();
+            DAL.GetServiceTable();
+            
 
             Console.WriteLine("Hello World!");
         }

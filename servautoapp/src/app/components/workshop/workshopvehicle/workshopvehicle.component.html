@@ -71,7 +71,7 @@
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col add-top-margin ">
                  <select  class=" form-control" name="types" [(ngModel)]="selectedservicetypes" (change)="selectServiceTypes()" [disabled]="typeshw" required >
                     <option [selected] [ngValue]="selectedservicetypes" hidden disabled >{{selectedservicetypes}}</option>
-                    <option *ngFor="let item of services" [ngValue]="item.types">{{item.types}}</option>
+                    <option *ngFor="let item of services" [ngValue]="item.service">{{item.service}}</option>
                 </select>
             </div>
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-col add-top-margin ">

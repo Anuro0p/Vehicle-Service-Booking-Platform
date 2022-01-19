@@ -1,3 +1,3 @@
 export interface IServiceTypes{
-    types:string;
+    service:string;
 }

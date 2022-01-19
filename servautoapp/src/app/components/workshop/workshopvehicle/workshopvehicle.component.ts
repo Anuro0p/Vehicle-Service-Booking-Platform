@@ -19,6 +19,7 @@ export class WorkshopvehicleComponent implements OnInit {
   services!:IServiceTypes[];
   abc!:string;
   stype!:string[];
+  service!:string[];
   selectedtype:string="Select Type";
   selectedbrand:string="Select Brand";
   selectedmodel:string="Select Model";
@@ -33,6 +34,7 @@ export class WorkshopvehicleComponent implements OnInit {
 
   ngOnInit(): void {
     this.getServiceType();
+    console.log(this.services)
   }
   selectType()
   {
@@ -62,7 +64,7 @@ export class WorkshopvehicleComponent implements OnInit {
   selectModel(){
     
     console.log(this.selectedmodel)
-    
+    console.log(this.services)
   
     this.typeshw="false";
     this.priceshw="false";
@@ -77,11 +79,12 @@ export class WorkshopvehicleComponent implements OnInit {
 
   selecetPrice(){
     this.dayshw="false";
+
   }
 
 
-  getServiceType(){
-    this._userservice.getServiceTypes().subscribe(
+  async getServiceType(){
+    await this._userservice.getServiceTypes().subscribe(
       response=>{
         this.services=response;
       }

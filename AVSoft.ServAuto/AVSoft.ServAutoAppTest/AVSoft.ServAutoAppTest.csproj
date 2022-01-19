@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AVSoft.ServAutoDataAccessLayer\AVSoft.ServAutoDataAccessLayer.csproj" />
+    <ProjectReference Include="..\AVSoft.ServAutoBusinessLayer\AVSoft.ServAutoBusinessLayer.csproj" />
   </ItemGroup>
 
 </Project>

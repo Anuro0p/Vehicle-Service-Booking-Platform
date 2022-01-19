@@ -54,5 +54,17 @@ namespace AVSoft.ServAutoServiceLayer.Controllers
         {
             return Json(BL.GetServiceTypes());
         }
+
+        [HttpGet]
+        public JsonResult GetServiceTable()
+        {
+            return Json(BL.GetServiceTable());
+        }
+
+        [HttpGet]
+        public JsonResult VerifyService(string email)
+        {
+            return Json(BL.VerifyService(email));
+        }
     }
 }

@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcomecustomer',
@@ -9,7 +10,7 @@ export class WelcomecustomerComponent implements OnInit {
   element!:any;
    isShow!:boolean;
   showupdate:boolean=true;
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
     this.isShow=false;
@@ -38,7 +39,7 @@ export class WelcomecustomerComponent implements OnInit {
     }
 
      RouteOrder(){
-      //  this.router.navigate(['test1']);
+      this.router.navigate(['order']);
      }
 
 

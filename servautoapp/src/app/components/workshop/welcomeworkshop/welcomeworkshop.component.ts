@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcomeworkshop',
@@ -11,7 +12,7 @@ export class WelcomeworkshopComponent implements OnInit {
   progress!:string;
   element!:any;
   shwOrder:boolean=true;
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
     this.email=sessionStorage.getItem('userEmail')!.toString();
@@ -56,12 +57,16 @@ tog1(){
 }
 
 GetNewOrders(){
+  localStorage.setItem("orderprogress","Ordered");
+  this.router.navigate(['findorder'])
 
 }
 GetPendingOrders(){
-
+  localStorage.setItem("orderprogress","Pending");
+  this.router.navigate(['findorder'])
 }
 GetCompletedOrders(){
-  
+  localStorage.setItem("orderprogress","Completed");
+  this.router.navigate(['findorder'])
 }
 }

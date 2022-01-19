@@ -135,5 +135,50 @@ namespace AVSoft.ServAutoDataAccessLayer
             return serviceDataTable;
         }
 
+        public DataTable GetServiceTable()
+        {
+            DataTable serviceDataTable = new DataTable();
+            ServAutoComm.CommandText = "select email,name,address,pin,phno,capacity,password,status from workshopreg order by status  ";
+            ServAutoComm.CommandType = CommandType.Text;
+            ServAutoAdapter = new MySqlDataAdapter(ServAutoComm);
+            try
+            {
+                ServAutoAdapter.Fill(serviceDataTable);
+                Console.WriteLine("dl okay");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                serviceDataTable = null;
+            }
+            return serviceDataTable;
+        }
+
+        public int VerifyService(string email)
+        {
+            int returnval = 0;
+            ServAutoComm.CommandText = "update workshopreg set status=1 where email=@email";
+            ServAutoComm.CommandType = CommandType.Text;
+            ServAutoComm.Parameters.AddWithValue("@email", email);
+            try
+            {
+                ServAutoConn.Open();
+                ServAutoComm.ExecuteNonQuery();
+                returnval = 1;
+
+            }
+            catch (Exception ex)
+            {
+                returnval = -4;
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                ServAutoConn.Close();
+            }
+            return returnval;
+
+        }
+
     }
 }
